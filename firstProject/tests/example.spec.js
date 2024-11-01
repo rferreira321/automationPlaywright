@@ -2,7 +2,7 @@
 const { test, expect } = require('@playwright/test');
 
 test('has title', async ({ page }) => {
-  await page.goto('https://automationexercise.com/');
+  await page.goto('/');
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Automation Exercise/);
@@ -20,7 +20,7 @@ test('get started link', async ({ page }) => {
 
   await page.getByLabel('Consent', { exact: true }).click();
 
-  await expect(page.getByRole('link', { name: ' Signup / Login' })).toHaveText(/Signup/)
+  await expect(page.getByRole('link', { name: ' Siganup / Login' })).toHaveText(/Signup/)
 
   await page.getByRole('link', { name: ' Signup / Login' }).click()
   await page.locator('form').filter({ hasText: 'Signup' }).getByPlaceholder('Email Address').fill('rafael@ferreira.pt')
