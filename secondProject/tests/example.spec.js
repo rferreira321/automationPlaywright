@@ -4,7 +4,6 @@ import { faker } from '@faker-js/faker';
 const { test, expect } = require('@playwright/test');
 
 
-
 test('Login', async ({ page }) => {
   await page.goto('/');
 
